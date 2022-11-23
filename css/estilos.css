@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --------Gral------------ */    
+
+body{
+    background: linear-gradient(to top, #280038, #000000);
+    font-family: "Montserrat-Medium";
+    color: #ffffff;
+}
+p{
+  color: #ffffff;
+}
+
+/* --------Fuentes------------ */  
+
+@font-face {
+	font-family: 'GreatVibes-Regular';
+	src: url('../assets/font/Great_Vibes/GreatVibes-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Montserrat-Medium';
+	src: url('../assets/font/Montserrat/Montserrat-Medium.otf');
+}
+
+@font-face {
+	font-family: 'Montserrat-Light';
+	src: url('../assets/font/Montserrat/Montserrat-Light.otf');
+}
+
+@font-face {
+	font-family: 'Montserrat/Montserrat-ExtraBold';
+	src: url('../assets/font/Montserrat/Montserrat-ExtraBold.otf');
+}
+
+
+
+/* --------Logo------------ */
+#top{
+	text-align: center;
+}
+
+.logo{
+    margin: 15px;
+    width: 200px;
+}
+
+/* --------Menu------------ */ 
+.header { 
+  grid-area: header;
+     
+}
+
+.menu{
+background-color: #e20c82;  
+font-family: "Montserrat-Medium";
+padding: 0;
+list-style: none;
+width: 100%;
+margin: 0px auto;
+text-align: center;
+
+}
+
+.menu li{
+display: inline-block;
+text-align: center;
+}
+.menu li a{
+text-decoration: none;
+color: #ffffff;
+display: inline-block;
+padding: 20px;
+}
+
+.menu li a:hover{
+color:#ffffff;
+background-color: #7e0749;
+}
+
+
+/* --------Index------------ */ 
+
+.container {  
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 0.3fr 0.3fr 0.3fr 1fr 1fr;
+    grid-template-areas:
+      "header header header header header header"
+      "section1 section1 section1 section1 section1 section1"
+      "bp1 bp1 bp1 bp1 bp1 bp1"
+      "section2 section2 section2 section3 section3 section3"
+      "section4 section4 section5 section5 section6 section6"
+      "footer footer footer footer footer footer";
+}
+
+ 
+
+ .bp1 {
+  grid-area: bp1;
+  background-image:url(../assets/img/img1.png) ;
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px;
+}
+  .section1 { 
+    grid-area: section1;    
+}
+  .section2 { 
+    grid-area: section2; 
+    text-align: center;
+}
+  .section3 { 
+    grid-area: section3;     
+}
+  .section4 { 
+    grid-area: section4;
+    text-align: center;
+ }  
+  .section5 { 
+    grid-area: section5;
+    text-align: center;
+}
+
+.section6 { 
+  grid-area: section6;
+  text-align: center;
+}
+
+/* --------Footer------------ */  
+  .footer { 
+    grid-area: footer; 
+    background-color: #000000;
+}
+.footer img{
+  width: 50px;
+}
+/* -------------------- */
+
+
+h1{
+  font-family: "GreatVibes-Regular";
+  font-size: 60px;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 70px;
+
+}
+
+h2{
+  text-align: center;
+  margin:20px;
+  font-family: "Montserrat-Medium";
+  font-size: 40px;
+  color: #fff601;
+}
+
+h3{
+  text-align: center;
+  font-family: "Montserrat-Medium";
+  font-size: 25px;
+  color: #ffffff;
+  padding: 10px;
+}
+
+h5{
+  color:#ffffff;
+  text-align: center;
+	padding: 20px;
+}
+.bp1 p{
+  font-family: "Montserrat-ExtraBold";
+  font-size: 80px;
+  text-align: center;
+}
+.section1 p{
+  font-family:"Montserrat-Light" ;
+    font-size: 20px;
+    text-align: center;
+    margin: 40px;
+}
+
+.img_section2{
+  width: 750px;
+  text-align: center;
+  padding: 10px;
+}
+
+.txt_inicio{
+  text-align: center;
+  font-family:"Montserrat-Light" ;
+  font-size: 15px;
+  margin: 20px;
+}
+
+.section3 div{
+  padding-top: 60px;
+  margin: 60px;
+  font-family:"Montserrat-Light" ;
+  text-align: center;
+}
+
+.img_inicio{
+  text-align: center;
+  padding: 20px;
+}
+
+
+/* --------Responsive------------ */
+
+@media screen and (max-width:768px){
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+   
+    grid-template-areas:
+      "header header"
+      "section1 section1"
+      "bp1 bp1"
+      "section2"
+      "section3"
+      "section4 section5"
+      "section6 section6"
+      "footer footer";
+  }
+}
+
+@media screen and (max-width:600px){
+  .container {
+    grid-template-columns: 1fr;
+   
+    grid-template-areas:
+      "header"
+      "section1"
+      "bp1"
+      "section2"
+      "section3"
+      "section4"
+      "section5"
+      "section6"
+      "footer";
+  }
+  
+
+  .header{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* --------Galeria------------ */
+
+.img_galeria{
+  width: 400px;
+    border: double 2px grey;
+    opacity: .5;
+    margin: 20px;
+}
+
+main{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.img_galeria:hover{
+  opacity: 1;
+  border: solid 2px white;
+}
+
+
+
+
